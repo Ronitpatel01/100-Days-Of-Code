@@ -6,7 +6,7 @@ A high-end UI component featuring a dynamic 3D tilt effect and a rotating glowin
 
 ## 🚀 Live Demo
 
-[Paste your GitHub Pages link here]
+https://Ronitpatel01.github.io/100-Days-Of-Code/Day-01-3D-Glow-Card/
 
 ## 🛠️ Technical Highlights
 

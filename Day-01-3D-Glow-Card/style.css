@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes borderAnimate {
+    from {
+        --rotate: 0deg;
+    }
+
+    to {
+        --rotate: 360deg;
+    }
+}
+
+#card{
+  max-width: 320px;
+  height: 430px;
+  border: 2px solid transparent;
+  padding-inline: 10px;
+  padding-bottom: 10px;
+  color: whitesmoke ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 15px;
+    background:
+        linear-gradient(black) padding-box;
+  border: 5px solid rgba(255, 255, 255, 0);
+  transition: transform 0.1s ease-out, box-shadow 0.5s ease;
+  transform-style: preserve-3d; 
+  overflow: hidden;
+}
+  
+#card img, #card h3, #card p {
+  transform: translateZ(50px);
+}
+#card img{
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 15px;
+}
+#card p{
+  font-weight: 500;
+}
+
+#card:hover {
+  animation: borderAnimate 4s linear infinite; /* Combined into shorthand */
+  
+  /* Ensure the background layers correctly */
+  background-image: 
+    linear-gradient(black, black), 
+    conic-gradient(from var(--rotate), rgb(255, 0, 123), black, rgb(255, 0, 123));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  
+  box-shadow: 0 0 60px rgb(255, 0, 123);
+}
